@@ -38,7 +38,7 @@ const StyledMarkdown:NextPage<{markdown:string}> = (props)=>{
             li: ({node, ...props}) => <li style={{color:"#333",fontWeight:"bold",wordBreak:"break-all"}}>
                 {props.children}
             </li>,
-            table: ({node, ...props}) => <table style={{width:"100%",borderCollapse:"collapse",wordBreak:"break-all"}}>
+            table: ({node, ...props}) => <table style={{width:"100%",marginTop:54,borderCollapse:"collapse",wordBreak:"break-all"}}>
                 {props.children}
             </table>,
             thead: ({node, ...props}) => <thead style={{wordBreak:"break-all"}}>

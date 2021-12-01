@@ -1,6 +1,7 @@
 import {PostInfo} from "../model/PostInfo";
 import {BlogListEntity} from "../model/BlogListPage";
 import {BlogContentEntity} from "../model/BlogContentEntity";
+import {ArticleEditorItem} from "../model/ArticleInfo";
 
 export const SampleBlogRelation:PostInfo[] = [
     {
@@ -744,5 +745,28 @@ export const SampleBlogArticle:BlogContentEntity[] = [
                 name: "AI"
             }
         ]
+    }
+]
+
+export const SampleArticleEditorItems:ArticleEditorItem[] = [
+    {
+        public: false,
+        avatar: "http://den3.net/wp-content/uploads/2021/10/%E3%83%80%E3%82%A6%E3%83%B3%E3%83%AD%E3%83%BC%E3%83%89.png",
+        date: "2021/11/03",
+        id: "f7c39cf2-3fba-449e-adfe-91b458bc9d2e",
+        title: "Go言語 のお作法(?)について"
+    },
+    {
+        public: true,
+        avatar: "http://den3.net/wp-content/uploads/2021/10/toyosu.jpg",
+        date: "2021/10/08",
+        id: "590b6232-4d27-46f6-bc51-48d896ad954d",
+        title: "ポケモンで芝浦工大を表示する"
+    },{
+        public: true,
+        avatar: "http://den3.net/wp-content/uploads/2021/08/a-300x262.png",
+        date: "2021/9/8",
+        id: "e6a16b0e-d9f0-4677-954f-b8ceaf9ccb7b",
+        title: "なんかかっこいい名前の資格取ったよ^_^！"
     }
 ]

@@ -13,9 +13,9 @@ const TopExplanation = ()=>{
                 競技プログラミング, ゲーム制作, WEBアプリ開発, 機械学習研究 などを行っています
             </div>
             <div style={{marginTop:30}}>
-                <Link href={"/activity_content"}>
+                <Link  href={"/activity_content"}>
                     <a>
-                        <Button _hover={{backgroundColor:"#333"}} bg={CIRCLE_COLOR} color={"white"} size='lg' fontFamily={"\"Avenir-Roman\",\"Arial\",\"游ゴシック体\",YuGothic,\"游ゴシック Medium\",\"Yu Gothic Medium\",\"游ゴシック\",\"Yu Gothic\",sans-serif"}>
+                        <Button _focus={{ boxShadow: "none"}} _hover={{backgroundColor:"#333"}} bg={CIRCLE_COLOR} color={"white"} size='lg' fontFamily={"\"Avenir-Roman\",\"Arial\",\"游ゴシック体\",YuGothic,\"游ゴシック Medium\",\"Yu Gothic Medium\",\"游ゴシック\",\"Yu Gothic\",sans-serif"}>
                             もっと詳しく
                         </Button>
                     </a>

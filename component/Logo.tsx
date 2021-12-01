@@ -11,7 +11,7 @@ export const Logo:React.FC = ()=>{
                     <LogoIcon height={42}/>
                     <div style={{width:10,height:48,marginLeft:10,backgroundColor:CIRCLE_COLOR}}/>
                     <div style={{color:CIRCLE_COLOR,fontWeight:"bold",fontFamily:"mame4"}}>
-                        <Text fontSize="3xl">電子計算機研究会</Text>
+                        <Text fontSize="2xl">電子計算機研究会</Text>
                     </div>
                 </HStack>
             </a>

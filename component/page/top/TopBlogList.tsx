@@ -33,14 +33,18 @@ const TopBlogList:React.FC = (props)=>{
             <SimpleGrid spacing={['30px','30px','50px','90px']} columns={[1,2,2,3]}>
                 {
                     data.map((e,i)=>{
-                        return <BlogListItem {...e}/>
+                        return e.title && e.title.length > 0 ? <BlogListItem key={'list-'+i} {...e}/> : <></>
                     })
                 }
             </SimpleGrid>
             <Center mt={20} mb={5}>
-                <Button _hover={{backgroundColor:"#333"}} bg={CIRCLE_COLOR} color={"white"} size='lg' fontFamily={"\"Avenir-Roman\",\"Arial\",\"游ゴシック体\",YuGothic,\"游ゴシック Medium\",\"Yu Gothic Medium\",\"游ゴシック\",\"Yu Gothic\",sans-serif"}>
-                    もっと詳しく
-                </Button>
+                <Link  _focus={{ boxShadow: "none"}} href={"/blog/pages/1"}>
+                    <a>
+                        <Button _focus={{ boxShadow: "none"}} _hover={{backgroundColor:"#333"}} bg={CIRCLE_COLOR} color={"white"} size='lg' fontFamily={"\"Avenir-Roman\",\"Arial\",\"游ゴシック体\",YuGothic,\"游ゴシック Medium\",\"Yu Gothic Medium\",\"游ゴシック\",\"Yu Gothic\",sans-serif"}>
+                            もっと詳しく
+                        </Button>
+                    </a>
+                </Link>
             </Center>
         </div>
     </Center>

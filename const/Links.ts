@@ -5,6 +5,7 @@ export const API_HOST = '';
 export interface BlogPageLink {
     url:string,
     tag:string,
+
 }
 
 export const Links:BlogPageLink[] = [{
@@ -14,13 +15,13 @@ export const Links:BlogPageLink[] = [{
     url:"/activity_content",
     tag:"活動内容",
 },{
-    url:"/blog/page/1",
+    url:"/blog/pages/1",
     tag:"活動ブログ",
 },
     {
     url:"/link",
     tag:"おすすめリンク",
 },{
-    url:"/editor",
-    tag:"記事を書く"
+    url:"/admin",
+    tag:"部員ページ"
 }]

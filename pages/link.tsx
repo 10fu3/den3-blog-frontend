@@ -1,10 +1,14 @@
 import {GetStaticProps, NextPage} from "next";
 import ExternalPage from "../component/page/ExternalPage";
-import NormalMarkdownPage from "../component/page/NormalMarkdownPage";
 import {STATIC_API_HOST} from "../const/Links";
 import StaticContentPage from "../component/StaticContentPage";
 
-export const getStaticProps: GetStaticProps<{markdown:string|undefined,status:'error'|'success',message:string|null}> = async (context) => {
+interface Props {
+    markdown:string|undefined
+    status:'error'|'success',message:string|null
+}
+
+export const getStaticProps: GetStaticProps<Props> = async (context) => {
 
     const res = await fetch(STATIC_API_HOST+'information.json')
 
@@ -17,9 +21,9 @@ export const getStaticProps: GetStaticProps<{markdown:string|undefined,status:'e
             }
         }
     }else{
-        const url:{description:undefined} = await res.json()
+        const url:{suggest:undefined} = await res.json()
 
-        const description = await fetch(STATIC_API_HOST+url.description)
+        const description = await fetch(STATIC_API_HOST+url.suggest)
 
         if(description.status !== 200){
             return {
@@ -42,8 +46,8 @@ export const getStaticProps: GetStaticProps<{markdown:string|undefined,status:'e
     }
 };
 
-const ActivityContent:NextPage<{markdown:string|undefined,status:'error'|'success',message:string|undefined}> = (props)=>{
-    return props.markdown ? <StaticContentPage markdown={props.markdown} title={"活動紹介"}/> : <></>
+const LinksPage:NextPage<Props> = (props)=>{
+    return props.markdown ? <StaticContentPage markdown={props.markdown} title={'おすすめリンク'}/> : <></>
 }
 
-export default ActivityContent
+export default LinksPage
