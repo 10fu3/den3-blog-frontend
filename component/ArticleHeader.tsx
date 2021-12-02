@@ -2,7 +2,7 @@ import React from "react";
 import {HStack, VStack} from "@chakra-ui/layout";
 
 export const ArticleHeader:React.FC<{img?:string}> = (props)=>{
-    return <div style={{position:"relative",marginBottom:45,borderRadius:"0 0 12px 12px",backgroundColor:props.img ? "white" : "rgba(252,252,252,0)"}}>
+    return <div style={{boxShadow:"0 2px 4px #4385bb12",position:"relative",width:"100%",maxWidth:"1120px",marginBottom:45,borderRadius:"0 0 12px 12px",backgroundColor:props.img ? "white" : "rgb(256,256,256)"}}>
 
         <div style={{opacity:0.4,filter:"blur(5px);",height:300,backgroundSize:"cover",backgroundPosition:"center",backgroundImage:`url("${props.img ? props.img : ''}")`}}/>
 

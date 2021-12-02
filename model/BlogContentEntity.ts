@@ -20,6 +20,7 @@ export interface BlogTopics {
 }
 
 export interface BlogContentEntity {
+    id:string,
     markdown:string,
     title:string,
     header_img?:string,

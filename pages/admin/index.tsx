@@ -2,27 +2,97 @@ import {NextPage} from "next";
 import {Box, Divider, HStack, Spacer, Text, VStack} from "@chakra-ui/layout";
 import InternalPage from "../../component/page/InternalPage";
 import {Button} from "@chakra-ui/button";
-import {Image} from "@chakra-ui/react";
+import {
+    AlertDialog,
+    AlertDialogBody,
+    AlertDialogContent, AlertDialogFooter,
+    AlertDialogHeader,
+    AlertDialogOverlay,
+    Image,
+    Tooltip
+} from "@chakra-ui/react";
 import Link from "next/link"
-import React from "react";
+import React, {Dispatch, SetStateAction, useEffect, useState} from "react";
 import {ArticleEditorItem} from "../../model/ArticleInfo";
 import {SampleArticleEditorItems} from "../../const/Sample";
+import {DeleteIcon, EditIcon, LockIcon, UnlockIcon} from "@chakra-ui/icons";
+import {FocusableElement} from "@chakra-ui/utils";
 
-const LinkButton:React.FC<{color:string,link:string,mr?:boolean,ml?:boolean}> = (props)=>{
-    return <Box mr={props.mr ? 1 : 0} ml={props.ml?"auto":""}>
-        <Link href={props.link}>
-            <a>
-                <HStack>
-                    <Button w={"full"} colorScheme={props.color}>
-                        {props.children}
-                    </Button>
-                </HStack>
-            </a>
-        </Link>
+const LinkButton:React.FC<{color:string,link:string,mr?:boolean,ml?:boolean,explain:string,onClick?:()=>void}> = (props)=>{
+
+
+    return <Tooltip hasArrow label={props.explain} placement='top'>
+    <Box mr={props.mr ? 1 : 0} ml={props.ml?"auto":""}>
+        {
+            props.link.length > 0 ? <Link href={props.link}>
+                <a>
+                    <HStack>
+                        <Button w={"full"} onClick={props.onClick} colorScheme={props.color}>
+                            {props.children}
+                        </Button>
+                    </HStack>
+                </a>
+            </Link> : <HStack>
+                <Button w={"full"} onClick={props.onClick} colorScheme={props.color}>
+                    {props.children}
+                </Button>
+            </HStack>
+        }
     </Box>
+    </Tooltip>
+}
+
+const DeleteAlertDialog:React.FC<{isOpen:boolean,setIsOpen:Dispatch<SetStateAction<boolean>>,onDelete:()=>void}> = (props) => {
+    const onClose = () => {
+        props.setIsOpen(false)
+    }
+
+    const cancelRef = React.useRef<FocusableElement | null>(null)
+
+    return (
+        <>
+            <AlertDialog
+                isOpen={props.isOpen}
+                leastDestructiveRef={cancelRef}
+                onClose={onClose}
+            >
+                <AlertDialogOverlay>
+                    <AlertDialogContent>
+                        <AlertDialogHeader fontSize='lg' fontWeight='bold'>
+                            確認
+                        </AlertDialogHeader>
+
+                        <AlertDialogBody>
+                            本当に記事を削除しますか? 取り消しはできません
+                        </AlertDialogBody>
+
+                        <AlertDialogFooter>
+                            <Button onClick={onClose}>
+                                キャンセル
+                            </Button>
+                            <Button colorScheme='red' onClick={props.onDelete} ml={3}>
+                                削除
+                            </Button>
+                        </AlertDialogFooter>
+                    </AlertDialogContent>
+                </AlertDialogOverlay>
+            </AlertDialog>
+        </>
+    )
 }
 
 const ArticleListItem:React.FC<ArticleEditorItem> = (props)=>{
+
+    const [isOpen, setIsOpen] = React.useState(false)
+
+    const handleVisible = ()=>{
+
+    }
+
+    const handleDelete = (num:string)=>{
+
+    }
+
     return <Box p={1}  justifyContent="center">
         <Box p={5} borderRadius={5} boxShadow="0 1px 1px 1px #000a3c33">
             <HStack>
@@ -38,27 +108,32 @@ const ArticleListItem:React.FC<ArticleEditorItem> = (props)=>{
                 </Text>
                 <Spacer/>
                 <VStack  display={{base:"none",md:"block"}}>
-                    <LinkButton color={"green"} link={""}>
-                        編集する
+                    <LinkButton color={"green"} link={"/admin/editor/article/"+props.id} explain={"編集する"}>
+                        <EditIcon/>
                     </LinkButton>
-                    <LinkButton color={"purple"} link={""}>
-                        非公開にする
+                    <LinkButton onClick={handleVisible} color={"purple"} link={""} explain={(props.public ? "非" : "")+"公開にする"}>
+                        {
+                            props.public ? <LockIcon/> : <UnlockIcon/>
+                        }
                     </LinkButton>
-                    <LinkButton color={"red"} link={""}>
-                        削除する
+                    <LinkButton onClick={()=>{setIsOpen(true)}} color={"red"} link={""} explain={"削除する"}>
+                        <DeleteIcon/>
                     </LinkButton>
+                    <DeleteAlertDialog isOpen={isOpen} setIsOpen={setIsOpen} onDelete={()=>{handleDelete(props.id)}}/>
                 </VStack>
             </HStack>
             <Box pt={5} display={{base:"flex",md:"none"}}>
                 <Box pt={1} display={{base:"flex",md:"none"}} alignContent="space-between" w={"full"}>
-                    <LinkButton mr color={"green"} link={""}>
-                        編集する
+                    <LinkButton mr color={"green"} link={""} explain={"編集する"}>
+                        <EditIcon/>
                     </LinkButton>
-                    <LinkButton mr color={"purple"} link={""}>
-                        非公開にする
+                    <LinkButton onClick={handleVisible} mr color={"purple"} link={""} explain={(props.public ? "非" : "")+"公開にする"}>
+                        {
+                            props.public ? <LockIcon/> : <UnlockIcon/>
+                        }
                     </LinkButton>
-                    <LinkButton ml color={"red"} link={""}>
-                        削除する
+                    <LinkButton onClick={()=>{setIsOpen(true)}} ml color={"red"} link={""} explain={"削除する"}>
+                        <DeleteIcon/>
                     </LinkButton>
                 </Box>
             </Box>
@@ -68,7 +143,11 @@ const ArticleListItem:React.FC<ArticleEditorItem> = (props)=>{
 
 const AdminTopPage:NextPage = ()=>{
 
-    const data = SampleArticleEditorItems
+    const [data,setDate] = useState(SampleArticleEditorItems)
+
+    useEffect(()=>{
+
+    })
 
     return <InternalPage maxW={"1120px"}
                          topbarElement={<Box>
@@ -81,7 +160,7 @@ const AdminTopPage:NextPage = ()=>{
                              </Link>
                          </Box>}>
         <Box boxShadow="0 3px 6px -2px #000a3c33" borderRadius={12} mt={"70px"} p={10} bg={"white"}>
-            <Text fontSize="4xl" p={"30px"}>
+            <Text fontSize="4xl" pt={"30px"} pb={"30px"}>
                 投稿した記事一覧
             </Text>
             {

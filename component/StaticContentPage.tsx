@@ -19,14 +19,15 @@ const StaticContentPage:React.FC<{markdown:string,title:string}> = (props)=>{
             }
             comment={[]}
             topics={
-            [
-                {
-                    avatar: "https://zncdn.dev/images/topic.png",
-                    id: "circle_intro",
-                    name: "サークル紹介"
-                }
-            ]
-        }/>
+                [
+                    {
+                        avatar: "https://zncdn.dev/images/topic.png",
+                        id: "circle_intro",
+                        name: "サークル紹介"
+                    }
+                ]
+            }
+            id={''}/>
     </ExternalPage>
 }
 

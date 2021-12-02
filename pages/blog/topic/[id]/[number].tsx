@@ -3,6 +3,7 @@ import ExternalPage from "../../../../component/page/ExternalPage";
 import {BlogListEntity} from "../../../../model/BlogListPage";
 import {SampleBlogList} from "../../../../const/Sample";
 import BlogList from "../../../../component/BlogList";
+import React from "react";
 
 interface Props{
     list:BlogListEntity[]

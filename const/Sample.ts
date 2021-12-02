@@ -375,6 +375,50 @@ export const SampleBlogList:BlogListEntity[] = [
     }
 ]
 
+export const SampleMarkdown2:string = `
+## そういえばバイト辞めました
+
+塾講大変すぎて涙出たし時間外労働の宝庫だったので逃げたよ～・・。
+カフェバイト超楽しくておすすめだよ
+画像処理はまかせて！
+
+7月11日にCG-ARTSが主催する画像処理エンジニア検定を受けてきました
+レベル別に2種類、「ベーシック」と「エキスパート」があって、暇を持て余していたので両方受けてみました。
+[詳細(気になる人はどうぞ)](https://www.cgarts.or.jp/kentei/about/img_engineer/index.html)
+
+## 数理科学科って画像処理屋さんだっけ？
+
+A.ちがいます。他の人は数学をちゃんとやってます(多分)
+私は情報の教職課程を取っている世にも珍しい子 なのですが、ある必修科目がこの資格を持ってるとなんかいいこと起きるみたいな、そんな、”良い”情報を小耳にはさんだ　っていうのが主な受験動機です。あとはまじで暇だったから。
+
+## 誰でも取れるの？
+
+ベーシックは、そこそこ勉強すれば取れるはず。(合格率：66.5%)
+エキスパートは知りません。時の運もあると思います。好きな問題が出れば受かるしそうじゃなきゃ落ちる。そもそも範囲がベーシックとは比べ物にならないぐらい広いので勉強が大変。根気強く勉強し続けるのも大事な気がする。(合格率：32.6%)
+ラスタスキャン！！
+
+この単語、テキストで何回見たか分からない。超書いてある。結局どういう意味？
+ベーシックの範囲では、カメラのこととか、モデリング、フィルタリングなど基礎的なことを学びます。言葉を覚えるのがメインな印象。(ちがうかも)
+エキスパートの範囲では、ベーシックの内容のより詳細な部分とか、データ圧縮の話とかを学びます。割と計算とかもたくさんあった。暗記だけではできない問題も出題されてたよ(数理科学科の腕の見せ所だね！)
+
+## 猫飼いたい。ﾆｬﾝ。
+
+もちまる日記を見なければ死ぬという病気にかかってしまったので、もち様と下僕様の素敵な日常を見守る毎日が続いております。もち様かわいい。かわいい。かわい、い。。。（全員見て→[「もちまる日記」](https://www.youtube.com/c/%E3%82%82%E3%81%A1%E3%81%BE%E3%82%8B%E6%97%A5%E8%A8%98/featured)）
+
+「猫飼いたい欲」は日に日に高まっていくばかりの今日この頃。しかし、猫を飼うには相当な経済力が必要で、バイトあんま行きたくない系女子大生には厳しいのです。現実。将来に期待大。
+
+話が大幅にそれてしまいましたが、つい最近合否の発表がありました。
+手ごたえは「ベーシックは固いけどエキスパートは微妙」な感じでした。が、どちらも合格することが出来ました（ここで拍手喝采）！上手にマークシートを塗れてよかった。マークシートを塗るバイトあったら紹介してください。結構きれいに塗れると思うよ。
+
+## フォトショ芸人までの道のりはまだ長そうです
+
+結構ちゃんと勉強したけど割と難しい内容も多かった気がします。普通に興味ある内容だった。かも。でも専攻にはしないかな、て感じ。やっぱり数字で遊ぶ方が性に合ってる。
+加工バレかわいい女の子yamiちゃんの裏方になりたくてフォトショのプロを目指した時期もあったけど、あれやってる人ほんとすごいよ。たぶん。ここで残念な情報ですが、この資格を取ってもフォトショ芸人にはなれません。
+
+## 次回作に期待です！
+
+5月から教習所に通って、やっと仮免許を手に入れました。遅。免許取ったら免許取ったブログ書く。嘘かも。
+`
 
 export const SampleMarkdown = `
 ## はじめに
@@ -620,10 +664,11 @@ class WassersteinGP(nn.Module):
 
 export const SampleBlogArticle:BlogContentEntity[] = [
     {
+        id:'e6a16b0e-d9f0-4677-954f-b8ceaf9ccb7b',
         author:{
-            avatar: "http://den3.net/wp-content/uploads/2021/07/whileicon-150x150.png",
-            bio: "誰か、、、変数の名付けのセンスをください、、、、、、、、、",
-            name: "うぇいる",
+            avatar: "http://den3.net/wp-content/uploads/2021/06/l-150x150.png",
+            bio: "音楽を愛してやまない大学生。最近カフェバイトを始めたがコーヒーを作り間違え続けて無限に飲んでいる。おいしい！わ、わざとじゃないもん(><)(AtCoderで競技プログラミングもやってます。)",
+            name: "せちゃん",
             id: '9b458210-c9a3-4f5b-bb4e-baafc3e77569'
         },
         comment: [
@@ -638,7 +683,7 @@ export const SampleBlogArticle:BlogContentEntity[] = [
                 date: "2021/02/11 08:10:11"
             },{
                 author:{
-                    avatar: "http://den3.net/wp-content/uploads/2021/07/whileicon-150x150.png",
+                    avatar: "den3.net/wp-content/uploads/2021/07/whileicon-150x150.png",
                     bio: "誰か、、、変数の名付けのセンスをください、、、、、、、、、",
                     name: "うぇいる",
                     id: '9b458210-c9a3-4f5b-bb4e-baafc3e77569'
@@ -647,9 +692,9 @@ export const SampleBlogArticle:BlogContentEntity[] = [
                 date: "2021/02/11 08:10:11"
             }
         ],
-        header_img: "http://den3.net/wp-content/uploads/2021/10/whileirohen-300x205.jpg",
-        markdown: SampleMarkdown,
-        title: "【色変】AtCoder水色になりました！",
+        header_img: "http://den3.net/wp-content/uploads/2021/08/a-300x262.png",
+        markdown: SampleMarkdown2,
+        title: "なんかかっこいい名前の資格取ったよ^_^！",
         topics:[
             {
                 avatar: "https://storage.googleapis.com/zenn-user-upload/topics/b88e6a8ea6.png",
@@ -668,6 +713,7 @@ export const SampleBlogArticle:BlogContentEntity[] = [
             }
         ]
     },{
+        id:'0bcdacca-9f54-47d1-8cb9-94beb2a913d6',
         author:{
             avatar: "http://den3.net/wp-content/uploads/2020/05/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88-2020-05-30-22.52.18-150x150.png",
             bio: "アプリ作ったり競プロしてる2年生 アニメとか声優・アニソンも好き TrySailって知ってる〜？",
@@ -722,6 +768,7 @@ export const SampleBlogArticle:BlogContentEntity[] = [
             }
         ]
     },{
+        id:'f6f8a3c4-3b6a-4a8c-a475-ce1fb5c2f504',
         author:{
             avatar: "http://den3.net/wp-content/uploads/2020/06/character_program_shutdown-150x150.png",
             bio: "",
@@ -753,14 +800,14 @@ export const SampleArticleEditorItems:ArticleEditorItem[] = [
         public: false,
         avatar: "http://den3.net/wp-content/uploads/2021/10/%E3%83%80%E3%82%A6%E3%83%B3%E3%83%AD%E3%83%BC%E3%83%89.png",
         date: "2021/11/03",
-        id: "f7c39cf2-3fba-449e-adfe-91b458bc9d2e",
+        id: "0bcdacca-9f54-47d1-8cb9-94beb2a913d6",
         title: "Go言語 のお作法(?)について"
     },
     {
         public: true,
         avatar: "http://den3.net/wp-content/uploads/2021/10/toyosu.jpg",
         date: "2021/10/08",
-        id: "590b6232-4d27-46f6-bc51-48d896ad954d",
+        id: "f6f8a3c4-3b6a-4a8c-a475-ce1fb5c2f504",
         title: "ポケモンで芝浦工大を表示する"
     },{
         public: true,

@@ -9,7 +9,7 @@ import Link from "next/link"
 
 const BlogTags: React.FC<{tags:BlogTopics[]}> = (props) => {
     return (
-        <Container justifyContent="center" flexWrap="wrap" minW={245} pl={3} pr={3}>
+        <Box mr={4} ml={4} minW={245}>
             {props.tags ? props.tags.map((tag,i) => {
                 return (
                     <Link key={'tag-'+tag.id} href={'/blog/topic/'+tag.id+'/1'}>
@@ -21,7 +21,7 @@ const BlogTags: React.FC<{tags:BlogTopics[]}> = (props) => {
                     </Link>
                 );
             }) : <></>}
-        </Container>
+        </Box>
     );
 };
 

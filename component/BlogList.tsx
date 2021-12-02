@@ -1,7 +1,7 @@
 import React from "react";
 import {useRouter} from "next/router";
 import ExternalPage from "./page/ExternalPage";
-import {Box, Center, Heading, HStack, Text} from "@chakra-ui/layout";
+import {Box, Center, HStack, Text} from "@chakra-ui/layout";
 import {SimpleGrid} from "@chakra-ui/react";
 import BlogListItem from "./BlogListItem";
 import {Pagination} from "./Pagination";
@@ -26,20 +26,22 @@ const BlogList:React.FC<{topic?:BlogTopics,list:BlogListEntity[]}> = (props)=>{
     return <ExternalPage>
         <Center style={{backgroundColor:"#f3f3f3",width:"100%",padding:"60px 40px"}}>
             <div style={{width:"100%",maxWidth:"1120px",letterSpacing:0.2}}>
-                <Text fontSize="3xl">
+                <Box>
                     {
                         props.topic ?
                             <HStack>
-                                <Avatar w={"auto"} h={"100px"} src={props.topic?.avatar} />
-                                <div>
+                                <Avatar w={"100px"} h={"100px"} src={props.topic?.avatar} />
+                                <Text fontSize="3xl">
                                     {props.topic.name+"の記事一覧"}
-                                </div>
+                                </Text>
                             </HStack> :
-                            "ブログ一覧"
+                            <Text fontSize="3xl">
+                                ブログ一覧
+                            </Text>
                     }
-                </Text>
+                </Box>
                 <Box pt={"60px"}>
-                    <SimpleGrid spacing={['30px','30px','50px','90px']} columns={[1,2,2,3]}>
+                    <SimpleGrid spacing={['30px','30px','50px','90px']} columns={[1,1,2,3]}>
                         {
                             data.map((e,i)=>{
                                 return e ? <BlogListItem key={'list-'+i} {...e}/> : <></>
