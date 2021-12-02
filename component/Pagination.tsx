@@ -85,10 +85,10 @@ export const Pagination:React.FC<PaginationProps> = (props) => {
                         {i}
                     </div> : <Link href={props.baseLink+(Number(i))} key={Math.random()+'-'+Math.random()}>
                         <a>
-                            <Hover onHover={<div style={{width:36,height:36,paddingTop:6,margin:"0px 10px",borderRadius:"50%",backgroundColor:"gray",textAlign:"center",color:"white"}}>
+                            <Hover onHover={<div style={{width:36,height:36,paddingTop:6,margin:"0px 10px",borderRadius:"50%",backgroundColor:"gray",textAlign:"center",color:CIRCLE_COLOR}}>
                                 {i}
                             </div>}>
-                                <div style={{width:36,height:36,paddingTop:6,margin:"0px 10px",borderRadius:"50%",backgroundColor:"white",textAlign:"center",color:"black"}}>
+                                <div style={{width:36,height:36,paddingTop:4,margin:"0px 10px",borderWidth:2,borderColor:CIRCLE_COLOR,borderRadius:"50%",textAlign:"center",color:"#333"}}>
                                     {i}
                                 </div>
                             </Hover>
