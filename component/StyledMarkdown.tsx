@@ -35,9 +35,15 @@ const StyledMarkdown:NextPage<{markdown:string}> = (props)=>{
                     {props.children}
                 </a>
             </Link>,
-            li: ({node, ...props}) => <li style={{color:"#333",fontWeight:"bold",wordBreak:"break-all"}}>
+            ul: ({node, ...props}) => <ul style={{paddingLeft:20,paddingTop:24}}>
+                {props.children}
+            </ul>,
+            li: ({node, ...props}) => <li style={{color:"#333",paddingTop:15,fontWeight:"bold",wordBreak:"break-all"}}>
                 {props.children}
             </li>,
+            section: ({node, ...props}) => <section style={{paddingLeft:18,paddingTop:54}}>
+                {props.children}
+            </section>,
             table: ({node, ...props}) => <table style={{width:"100%",marginTop:54,borderCollapse:"collapse",wordBreak:"break-all"}}>
                 {props.children}
             </table>,
