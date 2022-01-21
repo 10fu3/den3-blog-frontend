@@ -71,7 +71,7 @@ const getPageNumbers = (currentPage:number,
     return pageNumbers
 }
 
-export const Pagination:React.FC<PaginationProps> = (props) => {
+const Pagination:React.FC<PaginationProps> = (props) => {
 
  return (
         <HStack>
@@ -95,3 +95,5 @@ export const Pagination:React.FC<PaginationProps> = (props) => {
         </HStack>
     );
 };
+
+export default Pagination
