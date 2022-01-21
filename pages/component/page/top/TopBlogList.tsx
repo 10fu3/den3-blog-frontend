@@ -16,8 +16,6 @@ import {
     Tag,
     Spacer, Flex,
 } from '@chakra-ui/react';
-import {BlogTopics} from "../../../../model/BlogContentEntity";
-import {BlogListEntity} from "../../../../model/BlogListPage";
 import {CIRCLE_COLOR} from "../../../../const/const";
 import {Button} from "@chakra-ui/button";
 

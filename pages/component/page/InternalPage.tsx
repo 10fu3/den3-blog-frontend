@@ -1,10 +1,8 @@
 import {NextPage} from "next";
-import {Box, Flex, Heading, Spacer, VStack} from "@chakra-ui/layout";
-import {Button, IconButton} from "@chakra-ui/button";
+import {Box, Flex,Spacer, VStack} from "@chakra-ui/layout";
+import {IconButton} from "@chakra-ui/button";
 import {ChevronLeftIcon} from "@chakra-ui/icons";
 import {useRouter} from "next/router";
-import ResizeTextArea from "../ResizeTextArea";
-import StyledMarkdown from "../StyledMarkdown";
 
 const InternalPage:NextPage<{topbarElement?:React.ReactElement,maxW?:string}> = (props)=>{
 

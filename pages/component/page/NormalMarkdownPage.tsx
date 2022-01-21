@@ -1,11 +1,11 @@
 import React from "react";
 import {BlogContentEntity} from "../../../model/BlogContentEntity";
-import {ArticleHeader} from "../ArticleHeader";
 import {VStack, Stack, Center, HStack, Box} from "@chakra-ui/layout";
 import StyledMarkdown from "../StyledMarkdown";
 import TopicsCard from "../TopicsCard";
 import AuthorCard from "../AuthorCard";
 import CommentBox from "../CommentBox";
+import ArticleHeader from "../ArticleHeader";
 
 const NormalMarkdownPage:React.FC<BlogContentEntity> = (props)=>{
     return <div style={{backgroundColor:"#edf2f7"}}>
