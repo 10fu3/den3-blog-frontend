@@ -663,56 +663,57 @@ class WassersteinGP(nn.Module):
 `
 
 export const SampleBlogArticle:BlogContentEntity[] = [
+    // {
+    //     id:'e6a16b0e-d9f0-4677-954f-b8ceaf9ccb7b',
+    //     author:{
+    //         avatar: "http://den3.net/wp-content/uploads/2021/06/l-150x150.png",
+    //         bio: "音楽を愛してやまない大学生。最近カフェバイトを始めたがコーヒーを作り間違え続けて無限に飲んでいる。おいしい！わ、わざとじゃないもん(><)(AtCoderで競技プログラミングもやってます。)",
+    //         name: "せちゃん",
+    //         id: '9b458210-c9a3-4f5b-bb4e-baafc3e77569'
+    //     },
+    //     comment: [
+    //         {
+    //             author:{
+    //                 avatar: "http://den3.net/wp-content/uploads/2021/07/whileicon-150x150.png",
+    //                 bio: "誰か、、、変数の名付けのセンスをください、、、、、、、、、",
+    //                 name: "うぇいる",
+    //                 id: '9b458210-c9a3-4f5b-bb4e-baafc3e77569'
+    //             },
+    //             body: "それってあなたの感想ですよね?",
+    //             date: "2021/02/11 08:10:11"
+    //         },{
+    //             author:{
+    //                 avatar: "den3.net/wp-content/uploads/2021/07/whileicon-150x150.png",
+    //                 bio: "誰か、、、変数の名付けのセンスをください、、、、、、、、、",
+    //                 name: "うぇいる",
+    //                 id: '9b458210-c9a3-4f5b-bb4e-baafc3e77569'
+    //             },
+    //             body: "それってあなたの感想ですよね?",
+    //             date: "2021/02/11 08:10:11"
+    //         }
+    //     ],
+    //     header_img: "http://den3.net/wp-content/uploads/2021/08/a-300x262.png",
+    //     markdown: SampleMarkdown2,
+    //     title: "なんかかっこいい名前の資格取ったよ^_^！",
+    //     topics:[
+    //         {
+    //             avatar: "https://storage.googleapis.com/zenn-user-upload/topics/b88e6a8ea6.png",
+    //             id: "atcoder",
+    //             name: "AtCoder"
+    //         },
+    //         {
+    //             avatar: "https://storage.googleapis.com/zenn-user-upload/topics/b88e6a8ea6.png",
+    //             id: "atcoder",
+    //             name: "AtCoder"
+    //         },
+    //         {
+    //             avatar: "https://storage.googleapis.com/zenn-user-upload/topics/b88e6a8ea6.png",
+    //             id: "atcoder",
+    //             name: "AtCoder"
+    //         }
+    //     ]
+    // },
     {
-        id:'e6a16b0e-d9f0-4677-954f-b8ceaf9ccb7b',
-        author:{
-            avatar: "http://den3.net/wp-content/uploads/2021/06/l-150x150.png",
-            bio: "音楽を愛してやまない大学生。最近カフェバイトを始めたがコーヒーを作り間違え続けて無限に飲んでいる。おいしい！わ、わざとじゃないもん(><)(AtCoderで競技プログラミングもやってます。)",
-            name: "せちゃん",
-            id: '9b458210-c9a3-4f5b-bb4e-baafc3e77569'
-        },
-        comment: [
-            {
-                author:{
-                    avatar: "http://den3.net/wp-content/uploads/2021/07/whileicon-150x150.png",
-                    bio: "誰か、、、変数の名付けのセンスをください、、、、、、、、、",
-                    name: "うぇいる",
-                    id: '9b458210-c9a3-4f5b-bb4e-baafc3e77569'
-                },
-                body: "それってあなたの感想ですよね?",
-                date: "2021/02/11 08:10:11"
-            },{
-                author:{
-                    avatar: "den3.net/wp-content/uploads/2021/07/whileicon-150x150.png",
-                    bio: "誰か、、、変数の名付けのセンスをください、、、、、、、、、",
-                    name: "うぇいる",
-                    id: '9b458210-c9a3-4f5b-bb4e-baafc3e77569'
-                },
-                body: "それってあなたの感想ですよね?",
-                date: "2021/02/11 08:10:11"
-            }
-        ],
-        header_img: "http://den3.net/wp-content/uploads/2021/08/a-300x262.png",
-        markdown: SampleMarkdown2,
-        title: "なんかかっこいい名前の資格取ったよ^_^！",
-        topics:[
-            {
-                avatar: "https://storage.googleapis.com/zenn-user-upload/topics/b88e6a8ea6.png",
-                id: "atcoder",
-                name: "AtCoder"
-            },
-            {
-                avatar: "https://storage.googleapis.com/zenn-user-upload/topics/b88e6a8ea6.png",
-                id: "atcoder",
-                name: "AtCoder"
-            },
-            {
-                avatar: "https://storage.googleapis.com/zenn-user-upload/topics/b88e6a8ea6.png",
-                id: "atcoder",
-                name: "AtCoder"
-            }
-        ]
-    },{
         id:'0bcdacca-9f54-47d1-8cb9-94beb2a913d6',
         author:{
             avatar: "http://den3.net/wp-content/uploads/2020/05/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88-2020-05-30-22.52.18-150x150.png",
@@ -809,11 +810,12 @@ export const SampleArticleEditorItems:ArticleEditorItem[] = [
         date: "2021/10/08",
         id: "f6f8a3c4-3b6a-4a8c-a475-ce1fb5c2f504",
         title: "ポケモンで芝浦工大を表示する"
-    },{
-        public: true,
-        avatar: "http://den3.net/wp-content/uploads/2021/08/a-300x262.png",
-        date: "2021/9/8",
-        id: "e6a16b0e-d9f0-4677-954f-b8ceaf9ccb7b",
-        title: "なんかかっこいい名前の資格取ったよ^_^！"
     }
+    // ,{
+    //     public: true,
+    //     avatar: "http://den3.net/wp-content/uploads/2021/08/a-300x262.png",
+    //     date: "2021/9/8",
+    //     id: "e6a16b0e-d9f0-4677-954f-b8ceaf9ccb7b",
+    //     title: "なんかかっこいい名前の資格取ったよ^_^！"
+    // }
 ]

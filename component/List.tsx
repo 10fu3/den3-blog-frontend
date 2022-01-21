@@ -4,11 +4,14 @@ import React from "react";
 import Link from "next/link";
 
 export const ListItem:React.FC<{id:string,avatar:string,name:string,body?:string,date?:string}> = (props) => {
+
+    console.log(props.id)
+
     return <HStack>
         <Avatar src={props.avatar}/>
         <Box w={1}/>
         <Stack>
-            <Link href={'/author/'+props.id}>
+            <Link href={'/author/'+props.id+'/1'} as={'/author/a/1'}>
                 <a>
                     <Heading size="sm">{props.name}</Heading>
                 </a>

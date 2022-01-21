@@ -12,7 +12,7 @@ const BlogTags: React.FC<{tags:BlogTopics[]}> = (props) => {
         <Box mr={4} ml={4} minW={245}>
             {props.tags ? props.tags.map((tag,i) => {
                 return (
-                    <Link key={'tag-'+tag.id} href={'/blog/topic/'+tag.id+'/1'}>
+                    <Link key={'tag-'+tag.id} href={'/blog/topic/'+tag.id+'/pages/1'}>
                         <a>
                             <Tag mr={1} mt={2} size={'md'} variant="solid" colorScheme="blue" key={tag.id}>
                                 {tag.name}

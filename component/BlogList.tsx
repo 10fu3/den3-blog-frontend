@@ -50,7 +50,7 @@ const BlogList:React.FC<{topic?:BlogTopics,list:BlogListEntity[]}> = (props)=>{
                     </SimpleGrid>
                 </Box>
                 <Center mt={20} mb={5}>
-                    <Pagination totalCount={props.list.length} currentNum={number} perPage={PER_PAGE} baseLink={'/blog/pages/'}/>
+                    <Pagination totalCount={props.list.length} currentNum={number} perPage={PER_PAGE} baseLink={'./pages/'}/>
                 </Center>
             </div>
         </Center>

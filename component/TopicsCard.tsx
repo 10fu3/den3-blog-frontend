@@ -9,7 +9,7 @@ const TopicsCard:React.FC<{topics:BlogTopics[],isMobile?:boolean}> = (props)=>{
                 {
                     props.topics.map((e,i)=>{
                         return <div key={'topics-'+i+'-'+e.id}>
-                            <Link href={'/blog/topics/'+e.id}>
+                            <Link href={'/blog/topic/'+e.id+'/pages/1'}>
                                 <a style={{color:"#333",textDecoration:"none !important"}}>
                                     <div style={{display:"flex",padding:2,marginRight:".5em",borderRadius:"1.5em",border:"1px solid #5a90b72b",alignItems:"center",marginTop:11}}>
                                         <img src={e.avatar} style={{borderRadius:"50%",display:"block"}} loading="lazy" width="24" height="24"/>
@@ -25,7 +25,7 @@ const TopicsCard:React.FC<{topics:BlogTopics[],isMobile?:boolean}> = (props)=>{
                 <div style={{display:"flex",flexWrap:"wrap"}}>
                     {
                         props.topics.map((e,i)=>{
-                            return <Link key={'topics-'+i+'-'+e.id} href={'/blog/topics/'+e.id}>
+                            return <Link key={'topics-'+i+'-'+e.id} href={'/blog/topic/'+e.id+'/pages/1'}>
                                 <a style={{minWidth:"49%"}}>
                                     <div style={{display:"flex",alignItems:"center",marginTop:11}}>
                                         <img src={e.avatar} style={{borderRadius:"50%",display:"block",border:"1px solid #588fb72b"}} loading="lazy" width="34" height="34"/>

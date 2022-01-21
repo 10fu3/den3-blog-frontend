@@ -1,4 +1,4 @@
-import {HStack} from "@chakra-ui/layout";
+import {Center, HStack} from "@chakra-ui/layout";
 import Hover from "./Hover";
 import Link from "next/link"
 import {CIRCLE_COLOR} from "../const/const";
@@ -73,7 +73,7 @@ const getPageNumbers = (currentPage:number,
 
 export const Pagination:React.FC<PaginationProps> = (props) => {
 
-    return (
+ return (
         <HStack>
             {
                 getPageNumbers(props.currentNum,props.perPage,props.totalCount,3).map(i=>{
@@ -83,15 +83,11 @@ export const Pagination:React.FC<PaginationProps> = (props) => {
                         </div>
                     </div>: Number(i) === props.currentNum ? <div style={{width:36,height:36,paddingTop:6,margin:"0px 10px",borderRadius:"50%",color:"white",backgroundColor:CIRCLE_COLOR,textAlign:"center"}}>
                         {i}
-                    </div> : <Link href={props.baseLink+(Number(i))} key={Math.random()+'-'+Math.random()}>
+                    </div> : <Link href={`${i}`} key={Math.random()+'-'+Math.random()}>
                         <a>
-                            <Hover onHover={<div style={{width:36,height:36,paddingTop:6,margin:"0px 10px",borderRadius:"50%",backgroundColor:"gray",textAlign:"center",color:CIRCLE_COLOR}}>
+                            <Center _hover={{paddingTop:6,backgroundColor:"gray",textAlign:"center",color:"white !important"}} style={{width:36,height:36,transition:"0.2s",paddingTop:0,margin:"0px 10px",borderWidth:2,borderColor:CIRCLE_COLOR,borderRadius:"50%",textAlign:"center",color:"#333"}}>
                                 {i}
-                            </div>}>
-                                <div style={{width:36,height:36,paddingTop:4,margin:"0px 10px",borderWidth:2,borderColor:CIRCLE_COLOR,borderRadius:"50%",textAlign:"center",color:"#333"}}>
-                                    {i}
-                                </div>
-                            </Hover>
+                            </Center>
                         </a>
                     </Link>
                 })
