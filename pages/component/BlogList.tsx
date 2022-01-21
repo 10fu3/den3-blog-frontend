@@ -4,10 +4,10 @@ import ExternalPage from "./page/ExternalPage";
 import {Box, Center, HStack, Text} from "@chakra-ui/layout";
 import {SimpleGrid} from "@chakra-ui/react";
 import BlogListItem from "./BlogListItem";
-import {Pagination} from "./Pagination";
 import {BlogListEntity} from "../../model/BlogListPage";
 import {BlogTopics} from "../../model/BlogContentEntity";
 import {Avatar} from "@chakra-ui/avatar";
+import Pagination from "./Pagination";
 
 const range = (start:number, end:number) => [...Array((end - start + 1) >= 0 ? end - start + 1 : 0)].map((_, i) => start + i)
 
