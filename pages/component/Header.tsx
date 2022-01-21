@@ -9,10 +9,10 @@ import {
     VStack,
     Text, Stack,
 } from "@chakra-ui/react"
-import {CIRCLE_COLOR} from "../const/const";
+import {CIRCLE_COLOR} from "../../const/const";
 import Head from "next/head";
 import {Logo, LogoIcon} from "./Logo";
-import {Links} from "../const/Links";
+import {Links} from "../../const/Links";
 import Link from "next/link";
 
 const HeaderContent:React.FC = () => {

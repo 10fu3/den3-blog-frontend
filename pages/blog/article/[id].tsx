@@ -1,10 +1,9 @@
 import {GetServerSideProps, GetStaticProps, NextPage} from "next";
-import ExternalPage from "../../../component/page/ExternalPage";
+import ExternalPage from "../../component/page/ExternalPage";
 import {STATIC_API_HOST} from "../../../const/Links";
 import {BlogContentEntity} from "../../../model/BlogContentEntity";
 import {SampleBlogArticle} from "../../../const/Sample";
-import StaticContentPage from "../../../component/StaticContentPage";
-import NormalMarkdownPage from "../../../component/page/NormalMarkdownPage";
+import NormalMarkdownPage from "../../component/page/NormalMarkdownPage";
 import React from "react";
 
 export const getServerSideProps: GetServerSideProps<{e?:BlogContentEntity}> = async (context) => {

@@ -1,8 +1,8 @@
-import {BlogAuthor} from "../model/BlogContentEntity";
+import {BlogAuthor} from "../../model/BlogContentEntity";
 import {ListItem} from "./List";
 import {Box, HStack} from "@chakra-ui/layout";
 import Link from "next/link";
-import {GITHUB_ICON, TWITTER_ICON} from "../const/Icon";
+import {GITHUB_ICON, TWITTER_ICON} from "../../const/Icon";
 
 const AuthorCard:React.FC<{author:BlogAuthor}> = (props)=>{
     return <div style={{backgroundColor:"white",width:"100%",borderRadius:12,padding:20,boxShadow:"0 2px 4px #4385bb12"}}>

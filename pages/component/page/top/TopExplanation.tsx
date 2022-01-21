@@ -1,4 +1,4 @@
-import {CIRCLE_COLOR} from "../../../const/const";
+import {CIRCLE_COLOR} from "../../../../const/const";
 import {Center} from "@chakra-ui/layout";
 import {Button} from "@chakra-ui/button";
 import Link from "next/link";

@@ -1,6 +1,6 @@
 import {NextPage} from "next";
-import {Box, Divider, HStack, Spacer, Text, VStack} from "@chakra-ui/layout";
-import InternalPage from "../../component/page/InternalPage";
+import {Box, HStack, Spacer, Text, VStack} from "@chakra-ui/layout";
+import InternalPage from "../component/page/InternalPage";
 import {Button} from "@chakra-ui/button";
 import {
     AlertDialog,

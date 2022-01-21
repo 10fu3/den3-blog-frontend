@@ -1,7 +1,7 @@
 import React from "react";
-import {BlogListEntity} from "../model/BlogListPage";
+import {BlogListEntity} from "../../model/BlogListPage";
 import {Flex, Spacer, Container} from "@chakra-ui/layout";
-import {BlogTopics} from "../model/BlogContentEntity";
+import {BlogTopics} from "../../model/BlogContentEntity";
 import {Box, Center, Heading, Image, Tag, Text} from "@chakra-ui/react";
 import {Avatar} from "@chakra-ui/avatar";
 

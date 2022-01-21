@@ -1,5 +1,5 @@
 import React from "react";
-import {BlogContentEntity} from "../../model/BlogContentEntity";
+import {BlogContentEntity} from "../../../model/BlogContentEntity";
 import {ArticleHeader} from "../ArticleHeader";
 import {VStack, Stack, Center, HStack, Box} from "@chakra-ui/layout";
 import StyledMarkdown from "../StyledMarkdown";

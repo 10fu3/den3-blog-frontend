@@ -2,7 +2,7 @@ import {GetServerSideProps, NextPage} from "next";
 import {SampleBlogList} from "../../../const/Sample";
 import {BlogListEntity} from "../../../model/BlogListPage";
 import React from "react";
-import BlogList from "../../../component/BlogList";
+import BlogList from "../../component/BlogList";
 
 interface Props{
     list:BlogListEntity[]

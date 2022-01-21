@@ -1,7 +1,7 @@
 import {GetStaticProps, NextPage} from "next";
-import ExternalPage from "../component/page/ExternalPage";
+import ExternalPage from "./component/page/ExternalPage";
 import {STATIC_API_HOST} from "../const/Links";
-import StaticContentPage from "../component/StaticContentPage";
+import StaticContentPage from "./component/StaticContentPage";
 
 interface Props {
     markdown:string|undefined

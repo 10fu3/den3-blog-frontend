@@ -7,8 +7,8 @@ import InternalPage from "./page/InternalPage";
 import {Box, Flex, Heading, VStack} from "@chakra-ui/layout";
 import ResizeTextArea from "./ResizeTextArea";
 import StyledMarkdown from "./StyledMarkdown";
-import {SampleBlogArticle} from "../const/Sample";
-import {BlogContentEntity} from "../model/BlogContentEntity";
+import {SampleBlogArticle} from "../../const/Sample";
+import {BlogContentEntity} from "../../model/BlogContentEntity";
 
 const Editor:React.FC<{id?:string}> = (props)=>{
 

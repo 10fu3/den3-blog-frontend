@@ -1,5 +1,5 @@
 import React from "react";
-import {SampleBlogList} from "../../../const/Sample";
+import {SampleBlogList} from "../../../../const/Sample";
 import BlogListItem from "../../BlogListItem";
 
 import {
@@ -16,9 +16,9 @@ import {
     Tag,
     Spacer, Flex,
 } from '@chakra-ui/react';
-import {BlogTopics} from "../../../model/BlogContentEntity";
-import {BlogListEntity} from "../../../model/BlogListPage";
-import {CIRCLE_COLOR} from "../../../const/const";
+import {BlogTopics} from "../../../../model/BlogContentEntity";
+import {BlogListEntity} from "../../../../model/BlogListPage";
+import {CIRCLE_COLOR} from "../../../../const/const";
 import {Button} from "@chakra-ui/button";
 
 const TopBlogList:React.FC = (props)=>{

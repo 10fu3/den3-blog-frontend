@@ -1,7 +1,7 @@
 import React from "react";
 import NextLink from "next/link";
 import {Stack, HStack, Text} from "@chakra-ui/react";
-import {CIRCLE_COLOR} from "../const/const";
+import {CIRCLE_COLOR} from "../../const/const";
 
 export const Logo:React.FC = ()=>{
     return <Stack>

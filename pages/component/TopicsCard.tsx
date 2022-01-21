@@ -1,4 +1,4 @@
-import {BlogTopics} from "../model/BlogContentEntity";
+import {BlogTopics} from "../../model/BlogContentEntity";
 import Link from "next/link";
 import {HStack} from "@chakra-ui/layout";
 

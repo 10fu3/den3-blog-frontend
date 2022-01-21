@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import {Divider, HStack, Spacer, Text, VStack} from "@chakra-ui/layout";
 import {ListItem} from "./List";
 import {Button} from "@chakra-ui/button";
-import {BlogContentComment} from "../model/BlogContentEntity";
+import {BlogContentComment} from "../../model/BlogContentEntity";
 
 function calcTextAreaHeight(value:string){
     let rowsNum = value.split('\n').length;

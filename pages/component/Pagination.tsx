@@ -1,7 +1,7 @@
 import {Center, HStack} from "@chakra-ui/layout";
 import Hover from "./Hover";
 import Link from "next/link"
-import {CIRCLE_COLOR} from "../const/const";
+import {CIRCLE_COLOR} from "../../const/const";
 
 interface PaginationProps {
     totalCount: number

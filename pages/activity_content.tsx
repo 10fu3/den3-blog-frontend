@@ -1,8 +1,8 @@
 import {GetStaticProps, NextPage} from "next";
-import ExternalPage from "../component/page/ExternalPage";
-import NormalMarkdownPage from "../component/page/NormalMarkdownPage";
+import ExternalPage from "./component/page/ExternalPage";
+import NormalMarkdownPage from "./component/page/NormalMarkdownPage";
 import {STATIC_API_HOST} from "../const/Links";
-import StaticContentPage from "../component/StaticContentPage";
+import StaticContentPage from "./component/StaticContentPage";
 
 export const getStaticProps: GetStaticProps<{markdown:string|undefined,status:'error'|'success',message:string|null}> = async (context) => {
 

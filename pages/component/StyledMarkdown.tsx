@@ -11,7 +11,7 @@ import { tomorrow } from 'react-syntax-highlighter/dist/cjs/styles/prism';
 import {Prism as SyntaxHighlighter} from 'react-syntax-highlighter'
 import Link from "next/link";
 import {Divider} from "@chakra-ui/layout";
-import {CIRCLE_COLOR} from "../const/const";
+import {CIRCLE_COLOR} from "../../const/const";
 
 const StyledMarkdown:NextPage<{markdown:string}> = (props)=>{
 
