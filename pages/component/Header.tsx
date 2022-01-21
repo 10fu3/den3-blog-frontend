@@ -1,4 +1,3 @@
-import NextLink from "next/link"
 import React from "react";
 
 import {
@@ -7,13 +6,12 @@ import {
     Box,
     HStack,
     VStack,
-    Text, Stack,
 } from "@chakra-ui/react"
 import {CIRCLE_COLOR} from "../../const/const";
 import Head from "next/head";
-import {Logo, LogoIcon} from "./Logo";
 import {Links} from "../../const/Links";
 import Link from "next/link";
+import Logo from "./Logo";
 
 const HeaderContent:React.FC = () => {
 

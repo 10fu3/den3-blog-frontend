@@ -3,8 +3,6 @@ import TwitterTimeline from "./TwitterTimeline";
 import ExternalLinksCard from "./ExternalLinksCard";
 import {Box, HStack, Stack, VStack} from "@chakra-ui/layout";
 
-import chakra from "@chakra-ui/react"
-
 const Footer = ()=>{
 
     const content = <>

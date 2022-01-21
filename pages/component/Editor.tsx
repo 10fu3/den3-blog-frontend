@@ -1,6 +1,4 @@
-import {NextPage} from "next";
-import {useEffect, useState} from "react";
-import {useRouter} from "next/router";
+import {useState} from "react";
 import {Button, IconButton} from "@chakra-ui/button";
 import {EditIcon, ViewIcon} from "@chakra-ui/icons";
 import InternalPage from "./page/InternalPage";

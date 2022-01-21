@@ -3,7 +3,7 @@ import {Avatar} from "@chakra-ui/avatar";
 import React from "react";
 import Link from "next/link";
 
-export const ListItem:React.FC<{id:string,avatar:string,name:string,body?:string,date?:string}> = (props) => {
+const ListItem:React.FC<{id:string,avatar:string,name:string,body?:string,date?:string}> = (props) => {
 
     console.log(props.id)
 
@@ -21,3 +21,5 @@ export const ListItem:React.FC<{id:string,avatar:string,name:string,body?:string
         </Stack>
     </HStack>
 }
+
+export default ListItem
